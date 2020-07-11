@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Volaris - Promociones y vuelos más baratos con Volaris</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="media/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="flipclock/flipclock.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="flipclock/flipclock.js"></script>	
+    <script src="style/pagechanger.js"></script>
+    <style type="text/css">
+        body { background: #A12885 !important; }
+     </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="voiheader">
+        <div class="container">
+            <a class="head-brand">
+                <img src="media/Volaris_logo.svg" href="index.html">
+            </a>
+            <div class="languageoption"> 
+                <form class="options" id="page-changer" action="" method="post">
+                    <label for="nav">Language </label>
+                    <select name="nav">
+                    <option value="index.html">Español</option>
+                    <option value="culture_en.html" selected="selected">English</option>
+                    <input type="submit" value="Go" id="submit" style="display: none;">
+                </form>  
+            </div>     
+        </div>
+    </nav>
+
+
+    <!-- Seguro vuelas -->
+    <div class="container" id="seguro">
+        <img id="logo_seguro" src="media/seguro_vuelas_en.svg">
+    </div>    
+
+
+    <!-- Title -->
+    <div class="container" id="title">
+        <h1 class="voi-h1-bold">Times have changed, and so have we.</h1>
+        <h1 class="voi-h1-regular">We have a surprise for you!</h1>
+    </div>
+
+
+    <!-- Countdown -->
+    <div class="container" id="countdown">
+        <h2 class="voi-h2">We will be ready in:</h2>
+        <div class="clock" id="reloj"></div>
+    </div>
+
+
+    <!-- Text -->
+    <div class="container" id="lasttext">
+        <h3 class="voi-h3">Our booking, check-in and app services are temporarily unavailable.</h2>
+    </div>
+
+    <!-- Video background -->
+    <video poster="media/explore-poster.jpg" preload="metadata" muted="" autoplay="" loop="">
+        <source src="https://ipav.com.mx/wp-content/uploads/2020/06/Volaris.mp4" type="video/mp4">
+        <source src="https://ipav.com.mx/wp-content/uploads/2020/06/Volaris.webm" type="video/webm">
+    </video>
+
+
+    <script type="text/javascript">
+        var clock;
+        
+        $(document).ready(function() {
+            // Set dates.
+            var futureDate  = new Date("July 14, 2020 01:00 PM");
+            var currentDate = new Date();
+
+            // Calculate the difference in seconds between the future and current date
+            var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+            // Calculate day difference and apply class to .clock for extra digit styling.
+            function dayDiff(first, second) {
+                return (second-first)/(1000*60*60*24);
+            }
+
+            if (dayDiff(currentDate, futureDate) < 100) {
+                $('.clock').addClass('twoDayDigits');
+            } else {
+                $('.clock').addClass('threeDayDigits');
+            }
+
+            if(diff < 0) {
+                diff = 0;
+            }
+
+            // Instantiate a coutdown FlipClock
+            clock = $('.clock').FlipClock(diff, {
+                clockFace: 'HourCounter',
+                countdown: true,
+            });
+        });
+    </script>
+
+</body>
+
+</html>

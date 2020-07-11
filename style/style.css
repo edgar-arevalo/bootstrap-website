@@ -1,0 +1,251 @@
+
+.voiheader {
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.10), 0 1px 20px 0 rgba(0,0,0,0.04);
+  z-index: 100;
+}
+
+.languageoption {
+  float: right!important;
+  margin-top: 18px;
+}
+
+.options{
+  font-family: "Lato",sans-serif;
+  font-size: .9rem;
+}
+
+.head-brand {
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.voi-h1-bold {
+    font-family: "Lato",sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+.voi-h1-regular {
+  font-family: "Lato",sans-serif;
+  font-weight: 300;
+  font-size: 2.2rem;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 0rem;
+  margin-top: .5rem;
+}
+
+.voi-h2 {
+  font-family: "Lato",sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.voi-h3 {
+  font-family: "Lato",sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+#title {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+
+#logo_seguro {
+  box-shadow: 0 12px 11px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+
+#countdown {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#reloj {
+    display: inline-block;
+    width: auto;
+}
+
+#lasttext {
+  margin-bottom: 2rem;
+}
+
+::selection {
+  color: #FFFFFF;
+  background: #5D1149;
+}
+
+img {
+  pointer-events: none;
+}
+
+
+@media (max-width: 768px) { 
+
+  #logo_seguro {
+    height: 100px;
+  }
+
+ }
+
+
+
+
+@media (max-width: 576px) { 
+  
+  .voi-h1-bold {
+    font-family: "Lato",sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+
+ .voi-h1-regular {
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 0rem;
+    margin-top: .5rem;
+  }
+
+ .voi-h2 {
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 1.5rem;
+ }
+
+ .voi-h3 {
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+    font-size: .9rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: .5rem;
+ }
+
+  #title
+  {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #logo_seguro {
+    height: 90px;
+  }
+
+  .clock{
+    zoom: 0.8;
+  }
+
+  #countdown {
+      text-align: center;
+      margin-bottom: 2.5rem;
+  }
+
+  #reloj {
+      display: inline-block;
+      width: auto;
+  }
+
+}
+
+
+@media (max-width: 425px){
+  .clock{
+    zoom: 0.7;
+  }
+
+  #seguro {
+    text-align: center;
+  }
+
+  #countdown {
+    margin-bottom: 7rem;
+  }
+}
+
+
+@media (max-width: 414px){
+  .clock{
+    zoom: 0.75;
+  }
+
+  #title{
+    margin-bottom: 5rem;
+  }
+
+  #countdown {
+    margin-bottom: 7rem;
+  }
+}
+
+
+
+@media (max-width: 375px){
+  .clock{
+    zoom: 0.6;
+  }
+
+  #logo_seguro {
+    height: 80px;
+  }
+
+  #title{
+    margin-bottom: 3.5rem;
+  }
+
+  #countdown {
+    margin-bottom: 6rem;
+  }
+}
+
+
+@media (max-width: 320px){
+  .clock{
+    zoom: 0.5;
+  }
+
+  #title{
+    margin-bottom: 2.5rem;
+  }
+
+  #countdown {
+    margin-bottom: 3rem;
+  } 
+}
+
+video {
+  bottom: 0;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  right: 0;
+  width: auto;
+  z-index: -1;
+}
